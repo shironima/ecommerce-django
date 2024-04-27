@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.title }}">
+        </div>
+        <div class="col-md-6">
+            <h2>{{ product.title }}</h2>
+            <p>{{ product.description }}</p>
+            <p>Price: Rp. {{ product.price | localecurrency }}</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
